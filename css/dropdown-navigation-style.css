@@ -1,0 +1,24 @@
+nav ul{
+  /*to remove the bullets*/
+  list-style: none;
+  /*to remove ul indentation*/
+  padding: 0;
+  margin: 0;
+}
+
+nav a{
+  text-decoration: none;/*remove the link underlining*/
+}
+
+nav > ul > li{
+  display: inline-block;/*only parent list items to be side by side*/
+}
+
+nav li ul{
+  position: absolute; /*makes parent list items stay at their assigned position*/
+  display: none;/*to hide the dropdown items*/
+}
+
+nav li:hover ul{
+  display: block;/*to show the dropdown items on hovering*/
+}
