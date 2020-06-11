@@ -1,0 +1,415 @@
+/* @import url('../css/fonts.css'); */
+@font-face {
+    font-family: 'THOR-Ragnarok';
+    src: url('../webfonts/webfonts_THOR-Ragnarok/THOR-Ragnarok.ttf.woff') format('woff'),
+        url('../webfonts/webfonts_THOR-Ragnarok/THOR-Ragnarok.ttf.svg#THOR-Ragnarok') format('svg'),
+        url('../webfonts/webfonts_THOR-Ragnarok/THOR-Ragnarok.ttf.eot'),
+        url('../webfonts/webfonts_THOR-Ragnarok/THOR-Ragnarok.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+  font-family: quantum;
+  src: url('../webfonts/quantum_4/Quantum.otf');
+}
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root{
+    /* theme for font family */
+    /* variables in css are specified by --variable (double dash) */
+    --dpLogo: 'THOR-Ragnarok', quantum, Calibri;
+
+    /* theme colors */
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /* gradient color */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+/* global rules */
+a{
+    text-decoration: none;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+p{
+    text-align: justify;
+    color: var(--font-color);
+}
+
+body{
+    background-color: var(--color-secondary);
+}
+
+/* global rules end */
+
+/* navbar */
+
+.nav{
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+    color: var(--text-gray);
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse{
+    height: 30rem;
+}
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+/* .nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+} */
+
+/* .nav .nav-items .nav-link:hover a{
+    color: var(--white);
+} */
+
+.nav .nav-brand a{
+    font-size: 3.5rem;
+    padding: auto 0;
+    display: block;
+    font-family: var(--dpLogo); /*using a variable*/
+    /* text-decoration: none; check global rules */
+}
+
+.nav-link{
+    overflow: hidden;
+}
+
+.nav-link a{
+    padding: 1rem 0.5rem;
+    overflow: hidden;
+    /* transition-delay: 0.5s; */
+}
+
+.nav-link a .underline-transition{
+	position: absolute;
+	display: block;
+}
+
+.nav-link a .underline-transition{
+	bottom: 0;
+	left: -100%;
+	width: 100%;
+	height: 0.2rem;
+	background: linear-gradient(270deg,var(--midnight),var(--midnight));
+}
+
+.nav-link a:hover .underline-transition{
+	left: 0%;
+    transition: 0.75s;
+	/* transition-delay: 0.25s; */
+}
+
+/* .nav .social{
+    padding: 1.4rem 0;
+}
+
+.nav .social i{
+    padding: 0.2rem;
+}
+
+.nav .social i:hover{
+    color: #a1c4cf;
+} */
+
+/* navbar ends */
+
+/* main site section */
+.blogPage-title h1{
+    width: 80%;
+    margin: auto;
+}
+
+.titleImageWrapper{
+    background: url('../assets/pic1.jpg');
+    width: 80%;
+    margin: auto;
+    display: block;
+    height: 55vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.content{
+    width: 100%;
+    font-family: Calibri, 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+
+.contentWrapper{
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.mainContent{
+    flex: 3;
+}
+
+.sideBar{
+    flex: 1;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.sideBar-social img{
+    width: 2rem;
+    margin-right: 0.5rem;
+}
+/* theme change feature */
+.theme-light {
+    --color-primary: #0060df;
+    --color-secondary: #ffffff;
+    --color-accent: #104f55;
+    --font-color: #0f0f0f;
+  }
+  .theme-dark {
+    --color-primary: #17ed90;
+    --color-secondary: #0f0f0f;
+    --color-accent: #104f55;
+    --font-color: #ffffff;
+  }
+/* theme change feature ends */
+
+.mainContent p{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    /* color: #65747e; */
+    line-height: 5vh;
+}
+
+.mainContent h2{
+    margin-top: 75px;
+}
+.mainContent img{
+   width: 90%; 
+}
+
+.tags span{
+    display: inline-block;
+    margin: 1.5vh 2vw 1vh 0;
+    background-color: #e4eaef;
+    border-radius: 100px;
+    padding: 1.5vh 2.2vw;
+}
+
+.relatedChild{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.relatedChild h3{
+    margin: 0;
+}
+
+.relatedChild p{
+    margin: 0 0 5px 0;
+    line-height: 30px;
+}
+
+.relatedLeft, .relatedRight{
+    flex: 1;
+}
+
+.related{
+    margin-bottom: 100px;
+}
+/* main site section ends */
+
+/* footer */
+.footer{
+    height: 100%;
+    background-color: black !important;
+    position: relative;
+    color: white !important;
+}
+
+.footer .container{
+    display: grid;
+    /* grid-template-columns: 50% 50%; */
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+    color: white !important;
+}
+
+.aboutMe p{
+    color: white !important;
+}
+
+.footer .container > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem 4rem;
+}
+
+.form-element input[type='email']{
+    margin-top: 0.5em;
+    padding: 0.5rem 0.4rem;
+    font-size: 0.9rem;
+    width: 18em;
+}
+
+.form-element input[type='submit']{
+    margin-top: 1em;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: white;
+    background-color: black;
+    border: solid 0.1rem white;
+}
+
+.form-element input[type='submit']:hover{
+    color: black;
+    background-color: white;
+}
+
+.footer .move-up{
+    position: absolute;
+    right: 6%;
+    bottom: 30%;    
+}
+
+.footer .move-up span{
+    color: var(--midnight);
+}
+
+.footer .move-up span:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.footer .rights{
+    justify-content: center;
+    color: rgb(151, 151, 151);
+    font-family: sans-serif;
+    font-size: 0.8rem;
+}
+
+.rights span{
+    padding-bottom: 0.1rem;
+}
+/* footer ends */
+
+/* Viewport less then or equal to 1130px */
+
+@media only screen and (max-width: 1130px){
+
+    footer.footer .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* Viewport less then or equal to 1130px ends */
+
+/* viewport less than or equal to 750px */
+
+@media only screen and (max-width: 750px){
+    .nav .nav-menu, .nav .nav-items{
+        flex-direction: column;
+    }
+
+    .nav-items{
+        align-items: center;
+    }
+    /* .nav .social{
+        align-self: center;
+    } */
+
+    .nav .toggle-collapse{
+        display: initial;
+    }
+
+    .contentWrapper{
+        flex-direction: column;
+    }
+
+    .relatedChild{
+        flex-direction: column;
+    }
+
+    footer.footer .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* viewport less than or equal to 750px ends*/
+
+/* Viewport less then or equal to 520px */
+
+@media only screen and (max-width: 520px){
+
+    footer.footer .container > div{
+        padding:  1rem .9rem !important;
+    }
+
+    footer .rights{
+        padding: 0 1.4rem;
+        text-align: center;
+    }
+
+    nav .toggle-collapse{
+        width: 80% !important;
+    }
+
+}
+
+/* Viewport less then or equal to 520px ends */
