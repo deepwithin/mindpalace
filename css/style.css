@@ -28,8 +28,6 @@ html, body{
     /* theme colors */
     --text-gray: #3f4954;
     --text-light: #686666da;
-    --bg-color: #0f0f0f;
-    --white: #ffffff;
     --midnight: #104f55;
 
     /* gradient color */
@@ -37,7 +35,7 @@ html, body{
 }
 
 /* global rules */
-a{
+a, a:active{
     text-decoration: none;
 }
 
@@ -60,12 +58,15 @@ body{
     background-color: var(--color-secondary);
 }
 
+main h1, main h2, main h3, main h4, main h5, main h6{
+    color: var(--font-color);
+}
 /* global rules end */
 
 /* navbar */
 
 .nav{
-    background: white;
+    background: var(--color-secondary);
     padding: 0 2rem;
     height: 0rem;
     min-height: 10vh;
@@ -75,7 +76,6 @@ body{
 
 .nav .nav-menu{
     justify-content: space-between;
-    color: var(--text-gray);
 }
 
 .nav .toggle-collapse{
@@ -94,11 +94,33 @@ body{
 
 .nav .toggle-collapse .toggle-icons i{
     font-size: 1.4rem;
-    color: var(--text-gray);
+    /* color: var(--text-gray); */
+    color: var(--font-color);
+    pointer-events: auto;
+}
+
+.toggle-icons, .nav-brand{
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+}
+
+.noClick{
+    pointer-events: none;
+}
+
+.noClick, #hamburger-menu{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .collapse{
-    height: 30rem;
+    height: 23rem; 
 }
 
 .nav .nav-items{
@@ -123,9 +145,11 @@ body{
 .nav .nav-brand a{
     font-size: 3.5rem;
     padding: auto 0;
-    display: block;
+    display: inline-block;
+    color: var(--color-accent);
     font-family: var(--dpLogo); /*using a variable*/
     /* text-decoration: none; check global rules */
+    overflow: hidden;
 }
 
 .nav-link{
@@ -133,6 +157,7 @@ body{
 }
 
 .nav-link a{
+    color: var(--color-accent);
     padding: 1rem 0.5rem;
     overflow: hidden;
     /* transition-delay: 0.5s; */
@@ -175,6 +200,9 @@ body{
 .blogPage-title h1{
     width: 80%;
     margin: auto;
+    padding: 1.5rem;
+    font-size: 3rem;
+    font-family: Calibri;
 }
 
 .titleImageWrapper{
@@ -213,29 +241,53 @@ body{
     margin-right: 0.5rem;
 }
 /* theme change feature */
+.themeChange p{
+    font-size: 1.2rem;
+    text-align: left;
+    margin: 2rem 1rem 0.2rem 1.7rem;
+    padding-left: 0.5rem;
+    border-left: 0.15rem solid var(--font-color);
+}
+
+.themeSwitch{
+    margin: 1em;
+    padding: 0.5rem 2rem;
+    font-size: 0.9rem;
+    font-family: Calibri;
+    border: 0.1em solid var(--font-color);
+    color: var(--font-color);
+    background-color: var(--color-secondary);
+}
+
+.themeSwitch:hover{
+    box-shadow: 0 0 0.5rem var(--font-color);
+    cursor: pointer;
+}
+
 .theme-light {
     --color-primary: #0060df;
     --color-secondary: #ffffff;
     --color-accent: #104f55;
-    --font-color: #0f0f0f;
+    --font-color: #121212;
   }
-  .theme-dark {
-    --color-primary: #17ed90;
-    --color-secondary: #0f0f0f;
-    --color-accent: #104f55;
-    --font-color: #ffffff;
-  }
+.theme-dark {
+   --color-primary: #17ed90;
+   --color-secondary: #121212;
+   --color-accent: #a1c4fd;
+   --font-color: #e4e4e4;
+ }
 /* theme change feature ends */
 
 .mainContent p{
-    margin-top: 10vh;
+    margin-top: 2vh;
     margin-bottom: 10vh;
     /* color: #65747e; */
-    line-height: 5vh;
+    line-height: 4.5vh;
+    font-size: 1.05rem;
 }
 
 .mainContent h2{
-    margin-top: 75px;
+    margin-top: 4vh;
 }
 .mainContent img{
    width: 90%; 
@@ -246,7 +298,7 @@ body{
     margin: 1.5vh 2vw 1vh 0;
     background-color: #e4eaef;
     border-radius: 100px;
-    padding: 1.5vh 2.2vw;
+    padding: 1vh 2.2vw;
 }
 
 .relatedChild{
@@ -289,8 +341,16 @@ body{
     color: white !important;
 }
 
-.aboutMe p{
+.footer p{
     color: white !important;
+}
+
+.footer a{
+    color: white;
+}
+
+.footer a:hover{
+    color: rgba(224, 194, 19, 0.9);
 }
 
 .footer .container > div{
@@ -309,16 +369,22 @@ body{
 .form-element input[type='submit']{
     margin-top: 1em;
     padding: 0.6rem 1.2rem;
-    font-size: 1rem;
-    font-weight: bolder;
+    font-size: 1.05rem;
+    font-family: Calibri;
     color: white;
     background-color: black;
-    border: solid 0.1rem white;
+    border: solid 0.05rem white;
 }
 
 .form-element input[type='submit']:hover{
     color: black;
     background-color: white;
+}
+
+.footerSocial i{
+    margin-top: 0.1rem;
+    margin-right: 0.6rem;
+    font-size: 1.8rem;
 }
 
 .footer .move-up{
@@ -332,7 +398,7 @@ body{
 }
 
 .footer .move-up span:hover{
-    color: white;
+    color: rgba(224, 194, 19, 0.9);
     cursor: pointer;
 }
 
@@ -370,9 +436,6 @@ body{
     .nav-items{
         align-items: center;
     }
-    /* .nav .social{
-        align-self: center;
-    } */
 
     .nav .toggle-collapse{
         display: initial;
