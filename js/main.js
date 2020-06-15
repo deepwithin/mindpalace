@@ -17,20 +17,6 @@ $(document).ready(function(){
 
 })
 
-// document.getElementById("themeButton").addEventListener("click", function(){
-//   document.documentElement.style.setProperty('--bg-color', 'pink');
-//   document.getElementById("themeButton").innerHTML('Light Theme');
-// });
-
-// document.getElementById('themeButton').addEventListener('click', function () {
-//   let darkThemeEnabled = document.body.classList.toggle('dark-theme');
-//   localStorage.setItem('dark-theme-enabled', darkThemeEnabled);
-// });
-
-// if (JSON.parse(localStorage.getItem('dark-theme-enabled'))) {
-//   document.body.classList.add('dark-theme');
-// }
-
 // function to set a given theme/color-scheme
 function setTheme(themeName) {
   localStorage.setItem('theme', themeName);
