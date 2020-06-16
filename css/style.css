@@ -231,6 +231,10 @@ main h1, main h2, main h3, main h4, main h5, main h6{
     width: 2rem;
     margin-right: 0.5rem;
 }
+
+.sideBar-social img:hover{
+    opacity: 0.7;
+}
 /* theme change feature */
 .themeChange p{
     font-size: 1.2rem;
@@ -251,7 +255,7 @@ main h1, main h2, main h3, main h4, main h5, main h6{
 }
 
 .themeSwitch:hover{
-    box-shadow: 0 0 0.5rem var(--font-color);
+    box-shadow: 0 0 0.6rem var(--font-color);
     cursor: pointer;
 }
 
@@ -259,12 +263,12 @@ main h1, main h2, main h3, main h4, main h5, main h6{
     --color-primary: #0060df;
     --color-secondary: #ffffff;
     --color-accent: #104f55;
-    --font-color: #121212;
+    --font-color: #555555;
   }
 .theme-dark {
    --color-primary: #17ed90;
-   --color-secondary: #121212;
-   --color-accent: #a1c4fd;
+   --color-secondary: #222222;
+   --color-accent: #44bbff;
    --font-color: #e4e4e4;
  }
 /* theme change feature ends */
